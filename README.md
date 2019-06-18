@@ -8,14 +8,24 @@ O sistema desenvolvido tem como objetivo principal auxiliar no gerenciamento efi
 --------------------
 
  ![](https://github.com/jacksonn455/cronus/blob/master/Login.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/Produtos.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/Produtos.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/Relatorios.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/Sobre.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/clientes.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/contato.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/fornecedores.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/funcionarios.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/primcipal.png)
+ --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/vemds.png)
  
