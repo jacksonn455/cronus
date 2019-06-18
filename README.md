@@ -17,13 +17,9 @@ O sistema foi desenvolvido para matéria de Engenharia de Software 3 e tem como 
  --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/Sobre.png)
  --------------------
- ![](https://github.com/jacksonn455/cronus/blob/master/clientes.png)
- --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/contato.png)
  --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/fornecedores.png)
- --------------------
- ![](https://github.com/jacksonn455/cronus/blob/master/funcionarios.png)
  --------------------
  ![](https://github.com/jacksonn455/cronus/blob/master/primcipal.png)
  --------------------
