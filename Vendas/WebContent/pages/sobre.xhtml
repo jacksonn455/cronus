@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui"
+template="/templates/template.xhtml"
+>
+
+
+<ui:define name="conteudo">
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("../resources/images/coffee.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("../resources/images/coffee.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("../resources/images/coffee.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background:  #BDBDBD;
+  color: white;
+}
+
+}
+h5 {
+padding-left: 105px;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 50px;
+}
+    .container {
+         display: flex;
+        justify-content: center;
+        align-items: center
+    }
+</style> 
+
+<body>
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+  
+   <!-- Slideshow -->
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">SOBRE</span> NÓS</span>
+  </div>
+</div>
+<!-- Content -->
+
+  <!-- Grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Nossas Soluções</span>
+    </div>
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <h3>Design</h3>
+      <p>Design diferenciado buscando ser uma ferramenta simples, prática e poderosa.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+      <h3>Gestão</h3>
+      <p>Controle de diversos setores da empresa de forma integrada para seu negócio.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+      <h3>Segurança</h3>
+      <p>Controle de acesso para maior segurança, com diferentes níveis de acesso.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+      <h3>Inovação</h3>
+      <p>Inovar, pesquisar e desenvolver softwares em sintonia com as tendências tecnológicas.</p>
+    </div>
+  </div>
+<br></br><br></br>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">SOBRE A EMPRESA</span></h5>
+    <p>Fundada em 2019 e localizada em Erechim, no norte do Rio Grande do Sul, o Software Cronus para gestão online tem as mais diversas soluções para microempresas.</p>
+    <p>Uma empresa genuinamente brasileira com os olhos voltados para o mundo. Contamos com a participação de uma equipe multidisciplinar no trabalho de desenvolvimento e aperfeiçoamento das soluções.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Tradição, criatividade e inovação dando ritmo ao sucesso da sua empresa.</i></p>
+      <p><center> Cronus software para gestão</center></p>
+    </div>
+    <!-- Band Members -->
+<center><div class="container">
+     <div class="w3-card-4" style="margin-top:20px">
+        <img src="../resources/images/jack.png"  width="150px" height="150px" style="margin-top:20px"/>
+        <div class="w3-container">
+          <h3>Jackson Magnabosco</h3>
+          <p class="w3-opacity">Desenvolvedor</p>
+        </div>
+      </div>
+    </div></center>
+    
+  </div>
+</div>
+</div>
+</div>
+</body>
+</ui:define>
+
+</ui:composition>

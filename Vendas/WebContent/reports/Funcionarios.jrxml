@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Funcionario" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8e093243-7dd6-46d8-a479-67b792fe8e68">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmVuZGFzLnRiX2Z1bmNpb25hcmlvcyBBUyAsMTM4LDc4LDRiYjE3ZWNiLTI0NmEtNDc0Ny1hYzVi&#xA;LTZiOWU3NDJjNzM1Mjs=&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vendas.tb_funcionarios.fun_funcao,
+	vendas.tb_funcionarios.fun_cpf,
+	vendas.tb_funcionarios.fun_nome
+FROM vendas.tb_funcionarios
+ORDER BY vendas.tb_funcionarios.fun_nome ASC]]>
+	</queryString>
+	<field name="fun_funcao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fun_funcao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_funcionarios"/>
+	</field>
+	<field name="fun_cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fun_cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_funcionarios"/>
+	</field>
+	<field name="fun_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fun_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_funcionarios"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="-10" y="50" width="555" height="79" uuid="6a91aaff-658e-47a7-b31c-40b43608fbe8">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["/WebContent/resources/images/contato9.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="30" uuid="066aa011-d1ce-4f10-aa11-7d84a3bd99fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE FUNCIONÁRIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="30" width="130" height="30" uuid="8c46115a-b53c-46db-aa64-3cc6870af8e6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="30" width="150" height="30" uuid="35275b0b-e6b3-4ec3-9f8b-c3521191ee0e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="30" width="115" height="30" uuid="ff2a6943-169a-4c13-85dd-eb44cce4bb42"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FUNÇÃO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="130" height="30" uuid="0f3c3c10-a6d0-455d-b69b-154975f80d76">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d13b64d-b985-4535-ada3-c4e87446cbcd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fun_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="4" width="150" height="30" uuid="08f0bd11-cd13-417f-905c-8151b5f9cdc5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d2be496a-a92e-47b2-bf15-6ba5391dbbcc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fun_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="4" width="115" height="30" uuid="c2ad688a-6f54-4667-85b3-f2f851bfffcf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1fd66770-236e-494b-ba2c-c162fb7006a6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fun_funcao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="12" width="555" height="30" uuid="8a8613fb-6829-4b75-9081-88c129e3734c"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Avenida Sete de Setembro, Bairro Fátima,  99709-910, Erechim – RS
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

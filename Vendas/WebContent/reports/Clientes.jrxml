@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Clientes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd878b60-3549-4c20-9917-0b3270f6f75d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmVuZGFzLnRiX2NsaWVudGVzIEFTICw4OCwxMjMsNmZkNzJlOTItMjQ4OS00ZjhlLTlkMzctZjNk&#xA;YmVlNDEzN2I0Ow==&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vendas.tb_clientes.cli_nome,
+	vendas.tb_clientes.cli_cpf,
+	vendas.tb_clientes.cli_telefone
+FROM vendas.tb_clientes]]>
+	</queryString>
+	<field name="cli_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cli_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_clientes"/>
+	</field>
+	<field name="cli_cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cli_cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_clientes"/>
+	</field>
+	<field name="cli_telefone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cli_telefone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_clientes"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="0" y="-5" width="555" height="79" uuid="ad294cba-9262-44a7-a9ee-492bf4a447bb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["/WebContent/resources/images/contato9.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="555" height="30" uuid="3ed16ff4-8264-487e-b655-281aeea37c94"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE CLIENTES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="260" y="10" width="120" height="33" uuid="cf3f31c3-ccd7-4538-8516-d9c6019fb3c3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="120" height="33" uuid="0123772c-64cd-43d6-9b2c-dbe5ad000d03"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="8" width="140" height="35" uuid="17c7b7c6-bea9-4ea0-9d05-e2cf3be86347"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="10" width="140" height="30" uuid="76bd3dea-f343-4021-89fd-1072310e3ef7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="514becc4-5e7d-4e70-b0aa-539b45044dc6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cli_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="10" width="120" height="30" uuid="2cfd0de0-97b3-4f53-9378-8e4557ea9c18">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="91cca144-2390-4e1a-af52-fb55147eabbb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cli_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="10" width="120" height="30" uuid="5a352673-186c-43ad-ba77-301384a8d3c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53e3d100-7c18-4840-b0d1-b6d4853a68f5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cli_telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="555" height="30" uuid="6f3a3d05-bb3f-40f2-8ecf-974d4fb6dc40"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Avenida Sete de Setembro, Bairro Fátima,  99709-910, Erechim – RS
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

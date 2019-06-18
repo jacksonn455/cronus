@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Produtos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe42ebae-8874-45cb-a4f7-b40b81f990ea">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmVuZGFzLnRiX3Byb2R1dG9zIEFTICw5Niw1OSw2ZjFjNzE1NS0yNzE4LTRkY2EtOTA1Ni00N2Fm&#xA;MmUwODFmNDk7&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vendas.tb_produtos.tb_fornecedores_for_codigo,
+	vendas.tb_produtos.pro_quantidade,
+	vendas.tb_produtos.pro_valor,
+	vendas.tb_produtos.pro_descricao
+FROM vendas.tb_produtos]]>
+	</queryString>
+	<field name="tb_fornecedores_for_codigo" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="tb_fornecedores_for_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_produtos"/>
+	</field>
+	<field name="pro_quantidade" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="pro_quantidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_produtos"/>
+	</field>
+	<field name="pro_valor" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pro_valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_produtos"/>
+	</field>
+	<field name="pro_descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pro_descricao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_produtos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="5" y="0" width="555" height="79" uuid="53073f95-d62c-4876-a98b-8e4a8791a798">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["/WebContent/resources/images/contato9.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="14" width="555" height="30" uuid="ab156dfa-eba8-4591-a8d4-77e9b2c4e266"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE PRODUTOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="55" y="15" width="125" height="30" uuid="9159ab0b-952e-4a8d-84ea-07b4a54abe35"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="15" width="110" height="30" uuid="777fb522-139b-437b-8e9d-38a838fb8d3d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="15" width="115" height="30" uuid="a35bd133-d5f4-48a7-a0fa-8fbd243e538e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORNECEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="15" width="110" height="30" uuid="6f11ac45-29b8-42d5-ac07-082ab9a17cca"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUANTIDADE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="55" y="0" width="125" height="30" uuid="c99b592e-15ec-4343-a3ae-994e19653f45">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7649125f-a2f7-4ceb-8bd7-4f65ffacbb8b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pro_descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="110" height="30" uuid="7669126c-e54d-4224-9d26-75ae56b3a80c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8617323d-d080-4682-94d6-2c9760806f37"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pro_valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="110" height="30" uuid="21063432-a8c0-422c-948f-44d96cbd9d7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf12cfd3-6ac1-4fe2-b36f-529be8929a96"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pro_quantidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="115" height="30" uuid="7b420a46-5ab0-417e-9fb6-93751b7cb431">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="716894a2-7885-406e-b921-34e9cf529c89"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tb_fornecedores_for_codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="12" width="555" height="30" uuid="28f58682-bba1-4e93-a11d-2db29a05e622"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Avenida Sete de Setembro, Bairro Fátima,  99709-910, Erechim – RS
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

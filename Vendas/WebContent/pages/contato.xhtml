@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui"
+template="/templates/template.xhtml">
+
+<ui:define name="conteudo">
+<link
+		href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+		rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background:  #BDBDBD;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+<body>
+<div class="container">
+  <div style="text-align:center">
+  <br></br>
+    <h2>Fale conosco!</h2>
+    <p>Este é o seu canal de comunicação com o software Cronus para gestão.</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="../resources/images/map.jpg" style="width:100%"/>
+      <br></br><br></br><br></br>
+      <div class="w3-col m8 w3-panel">
+ <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Erechim, RS<br></br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Contato:  (54)98435-4004<br></br>
+         </div>
+    </div>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">Nome</label>
+        <input type="text" id="fname" name="Nome" placeholder="Seu nome.."/>
+        <label for="lname">Sobrenome</label>
+        <input type="text" id="lname" name="Sobrenome" placeholder="Seu sobrenome.."/>
+        <label for="fphone">Celular</label>
+        <p:inputMask mask="(99)99999-9999" type="text" id="fphone" name="Telefone" placeholder="Seu numero com DDD.."/>
+        <label for="country">País</label>
+        <select id="country" name="País">
+          <option value="br">Brasil</option>
+        </select>
+         <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option value="br">Rio Grande do Sul</option>
+        </select>
+            <label for="cidade">Cidade</label>
+        <select id="cidade" name="Cidade">
+          <option value="br">Erechim</option>
+        </select>
+        <label for="subject">Mensagem</label>
+        <textarea id="subject" name="subject" placeholder="Conte-nos sobre seu problema para que possamos ajudá-lo mais rapidamente.." style="height:170px"></textarea>
+          <button type="button" class="btn btn-outline-dark" style="width: 205px; height: 40px"><i class="fa fa-paper-plane"></i> Enviar </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</ui:define>
+</ui:composition>

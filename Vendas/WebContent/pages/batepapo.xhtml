@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui"
+template="/templates/template.xhtml"
+>
+<ui:define name="conteudo">
+<style>
+h5 {
+	padding-top: 0px;
+	padding-left:  40px;
+	padding-right:  40px;
+}
+</style>
+<h:head></h:head>
+
+<body>
+<table>
+  <tr>
+    <td><img  src="../resources/images/batepapo2.jpg"/></td>
+    <td>
+     	<h5><h:form>
+		<h:panelGrid columns="2">
+
+			<h:outputLabel value="Usuário: " />
+			<p:inputText value="#{batePapo.mensagem.usuario}"></p:inputText>
+			<h:outputLabel value="Mensagem: " />
+			<p:inputText value="#{batePapo.mensagem.mensagem}"></p:inputText>
+
+		</h:panelGrid>
+		<p:commandButton value="Enviar" action="#{batePapo.addMensagem()}"
+			process="@form" update="@form" />
+		<p:separator />
+		<p:dataTable value="#{batePapo.mensagens}" var="msg">
+			<p:column>
+				#{msg.momento.time}
+			</p:column>
+			<p:column>
+				#{msg.usuario}
+			</p:column>
+			<p:column>
+				#{msg.mensagem}
+			</p:column>
+		</p:dataTable>
+	</h:form></h5>
+	</td> 
+  </tr>
+ 
+</table>
+
+
+</body>
+</ui:define>
+</ui:composition>
+

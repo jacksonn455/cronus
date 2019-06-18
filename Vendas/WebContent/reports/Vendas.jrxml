@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Vendas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1537f87c-9c15-4c9f-91da-ed2903c8ffee">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmVuZGFzLnRiX3ZlbmRhcyBBUyAsOTksNjUsODI3YmYyMWEtZDNhYS00ZGRlLWEzNDgtYTQ0NDA4&#xA;N2QxOTM2Ow==&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vendas.tb_vendas.tb_clientes_cli_codigo,
+	vendas.tb_vendas.tb_funcionarios_fun_codigo,
+	vendas.tb_vendas.ven_valor_total,
+	vendas.tb_vendas.ven_horario
+FROM vendas.tb_vendas]]>
+	</queryString>
+	<field name="tb_clientes_cli_codigo" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="tb_clientes_cli_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_vendas"/>
+	</field>
+	<field name="tb_funcionarios_fun_codigo" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="tb_funcionarios_fun_codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_vendas"/>
+	</field>
+	<field name="ven_valor_total" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ven_valor_total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_vendas"/>
+	</field>
+	<field name="ven_horario" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="ven_horario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_vendas"/>
+	</field>
+	<group name="tb_clientes_cli_codigo">
+		<groupExpression><![CDATA[$F{tb_clientes_cli_codigo}]]></groupExpression>
+	</group>
+	<group name="tb_funcionarios_fun_codigo">
+		<groupExpression><![CDATA[$F{tb_funcionarios_fun_codigo}]]></groupExpression>
+	</group>
+	<group name="ven_valor_total">
+		<groupExpression><![CDATA[$F{ven_valor_total}]]></groupExpression>
+	</group>
+	<group name="ven_horario">
+		<groupExpression><![CDATA[$F{ven_horario}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="5" y="0" width="555" height="79" uuid="ad9fbd1c-880b-4d69-8646-28e6607fcf36">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["/WebContent/resources/images/contato9.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="13" width="555" height="30" uuid="2b305471-edaa-4697-bffe-741de5f75443"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE VENDAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="430" y="10" width="100" height="30" uuid="7aa9ba4c-5680-43e2-a2b6-17ac28c87e96"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="10" width="100" height="30" uuid="49c2c86c-2709-4b89-b944-c876f8601b59"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="10" width="140" height="30" uuid="7b0c9727-0681-48ab-bf54-36b927dd09de"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO FUNCIONÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="10" width="140" height="30" uuid="417723b0-e3c7-4317-8ba9-f44ae7e40c45"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO CLIENTE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="170" y="0" width="140" height="30" uuid="63252abb-3ed2-46f4-859b-3fd804ccfa6f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2309fdf3-df73-4070-93bf-7be61a45fff6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tb_clientes_cli_codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="100" height="30" uuid="22ac16b7-0a5f-4c94-8e8c-6fea59d89406">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fcd5089c-23c0-44b2-9471-6ac4dca38cb9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ven_horario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="100" height="30" uuid="46e0ace4-eb4e-4147-9c51-0f021dd228f2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bcb140d9-1627-4180-952d-6346e255333b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ven_valor_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="140" height="30" uuid="4ed3c41b-5cc7-432b-a8fc-77dff38598a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb4ffda6-47d4-4868-9580-c9beaab44fe4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tb_funcionarios_fun_codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="12" width="555" height="30" uuid="07b7df67-1422-4661-b6e9-6dd74b03823d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Avenida Sete de Setembro, Bairro Fátima,  99709-910, Erechim – RS
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fornecedor" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4972fd96-8921-400c-bc61-ae54b5504c52">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmVuZGFzLnRiX2Zvcm5lY2Vkb3JlcyBBUyAsMTQwLDYxLGRkMTY4OWViLTZlMmMtNGE0OS05MTE4&#xA;LTY5MTAzYjZhYmJmOTs=&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vendas.tb_fornecedores.for_descricao
+FROM vendas.tb_fornecedores]]>
+	</queryString>
+	<field name="for_descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="for_descricao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_fornecedores"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="0" y="5" width="555" height="79" uuid="702d7ed4-b2ee-43cf-a917-704463613919">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["/WebContent/resources/images/contato9.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="555" height="30" uuid="841e0620-7930-47d9-b6a0-bfd35899ba58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE FORNECEDORES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="31" width="260" height="30" uuid="53874e0b-44d9-4143-a9db-395eb93323ac"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="260" height="30" uuid="6179ee99-06e7-4512-acd0-853f3fe2f45c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e973e4a-5579-467a-a06c-6d6b359dcc6b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{for_descricao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="555" height="30" uuid="5bdf5aef-7893-443a-bb2a-1d2d59f2dd71"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Avenida Sete de Setembro, Bairro Fátima,  99709-910, Erechim – RS
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
